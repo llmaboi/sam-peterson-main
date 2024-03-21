@@ -40,13 +40,22 @@ jobs:
       - name: Preset Image Name
         run: echo "IMAGE_WEB_URL=$(echo ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:$(echo ${{ github.sha }} | cut -c1-7) | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
-      - name: Build and push Docker Image
-        uses: docker/build-push-action@v4
+      - name: Build and zip
+        uses: a7ul/tar-action@v1.1.0
         with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ env.IMAGE_WEB_URL }}
+          command: c
+          cwd: "./"
+          files: |
+            build/
+          outPath: deploy.tar
+
+      # - name: Build and push Docker Image
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: .
+      #     file: ./Dockerfile
+      #     push: true
+      #     tags: ${{ env.IMAGE_WEB_URL }}
 
       - name: Deploy Image to CapRrover
         uses: caprover/deploy-from-github@v1.1.2
@@ -54,4 +63,4 @@ jobs:
           server: '${{ secrets.CAPROVER_SERVER }}'
           app: '${{ secrets.WEB_APP_NAME }}'
           token: '${{ secrets.WEB_APP_TOKEN }}'
-          image: ${{ env.IMAGE_WEB_URL }}
+          # image: ${{ env.IMAGE_WEB_URL }}
