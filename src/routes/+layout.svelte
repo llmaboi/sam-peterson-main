@@ -18,7 +18,7 @@
     <AppBar>
       <svelte:fragment slot="lead">
         <h1 class="text-xl font-bold uppercase">
-          <a href="/about">Sam Peterson</a>
+          <a href="/">Sam Peterson</a>
         </h1>
       </svelte:fragment>
       <svelte:fragment slot="trail">

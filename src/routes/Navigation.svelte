@@ -5,10 +5,6 @@
 
 <AppRail>
   <!-- class="grid-rows-2 grid-cols-2" -->
-  <AppRailAnchor href="/about" title="About" selected={$page.url.pathname === '/about'}>
-    <svelte:fragment slot="lead"><i class="iconoir-developer text-2xl" /></svelte:fragment>
-    <span>About</span>
-  </AppRailAnchor>
   <AppRailAnchor href="/apps" title="Apps" selected={$page.url.pathname === '/apps'}>
     <svelte:fragment slot="lead"><i class="iconoir-collage-frame text-2xl" /></svelte:fragment>
     <span>Apps</span>
