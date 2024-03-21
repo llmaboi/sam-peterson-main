@@ -24,14 +24,6 @@
       <svelte:fragment slot="trail">
         <a
           class="btn btn-sm variant-ghost-surface"
-          href="https://twitter.com/llmaboi"
-          target="_blank"
-          rel="noreferrer"
-        >
-          X
-        </a>
-        <a
-          class="btn btn-sm variant-ghost-surface"
           href="https://linkedin.com/in/sam-n-peterson"
           target="_blank"
           rel="noreferrer"
