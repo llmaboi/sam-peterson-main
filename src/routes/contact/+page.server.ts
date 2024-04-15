@@ -11,7 +11,7 @@ export const load = () => {
     },
     {
       name: 'Github',
-      link: 'http://www.github.com/llmaboi',
+      link: 'http://www.github.com/s-petey',
       iconClass: 'iconoir-github',
       iconLink: null,
     },
@@ -23,7 +23,7 @@ export const load = () => {
     },
     {
       name: 'X',
-      link: 'http://www.twitter.com/llmaboi',
+      link: 'http://www.twitter.com/s-petey',
       iconClass: 'iconoir-x',
       iconLink: null,
     },
