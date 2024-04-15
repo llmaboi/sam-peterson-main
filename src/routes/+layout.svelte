@@ -32,7 +32,7 @@
         </a>
         <a
           class="btn btn-sm variant-ghost-surface"
-          href="https://github.com/llmaboi"
+          href="https://github.com/s-petey"
           target="_blank"
           rel="noreferrer"
         >
